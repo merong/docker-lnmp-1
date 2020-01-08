@@ -28,10 +28,10 @@ fpm:
   # environment:
     # Set your APP env variables here:
     # - APP_KEY=
-    # - DB_HOST=
-    # - DB_DATABASE=
-    # - DB_USERNAME=
-    # - DB_PASSWORD=
+    - DB_HOST=localhost
+    - DB_DATABASE=dev
+    - DB_USERNAME=dev
+    - DB_PASSWORD=dev
   links:
     - mysql:mysql
 
@@ -45,4 +45,4 @@ mysql:
     # NOTE: your data will be stored in ./mysql
     - ./mysql:/var/lib/mysql
   environment:
-    - MYSQL_ROOT_PASSWORD=your_mysql_password
+    - MYSQL_ROOT_PASSWORD=root
